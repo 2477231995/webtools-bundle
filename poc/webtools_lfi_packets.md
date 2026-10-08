@@ -12,7 +12,7 @@ python webtools_cookie_forge.py --base http://TARGET:33400
 The forged cookie has the form `WebTools=MQ==|<unix-ts>|<HMAC-SHA1>`, where
 `HMAC-SHA1 = HMAC-SHA1(cookie_secret, "WebTools" + "MQ==" + str(ts))` and
 `cookie_secret = "__" + md5("ERROR." + str(i) + "WebTools") + "__"` for some `i` in `0..9999`
-(observed: `i = 7245`, `cookie_secret = __16938769db2d67182ff1bd829ba5e1d0__`).
+(recovered at runtime by the PoC script; the concrete value is instance-specific and is not published).
 
 ---
 

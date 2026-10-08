@@ -26,6 +26,14 @@ management plugin for **Plex Media Server**, built on the Tornado framework. The
 2.md                                  # advisory 2 - logs download path traversal -> arbitrary file read
 poc/webtools_cookie_forge.py          # PoC: offline enumeration + forged session cookie
 poc/webtools_lfi_packets.md           # Yakit-ready raw HTTP requests (auth bypass + LFI)
+evidence/                             # captured proof (host / tokens redacted)
+  yakit_01_lfi_etc_passwd.png          #   Yakit repeater: /etc/passwd read
+  yakit_02_lfi_preferences.png         #   Yakit repeater: Preferences.xml read
+  01_auth_bypass_proof.png             #   forged cookie 200 vs no-cookie 302
+  02_lfi_etc_passwd_proof.png          #   /etc/passwd read
+  03_lfi_preferences_proof.png         #   Plex Preferences.xml (PlexOnlineToken)
+  authbypass_*.http / *.json           #   raw request/response
+  lfi_*.http / *.txt / *.xml           #   raw request/response
 ```
 
 ## References
